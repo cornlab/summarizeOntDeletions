@@ -1,0 +1,1 @@
+Datafile 'barcode02.fastq.gz' has been downsampled from original datafile of ~100k reads to 20k reads. Corresponds to K562 cells edited with CRISPR/Cas9 at HBB and sequenced using ONT-seq.

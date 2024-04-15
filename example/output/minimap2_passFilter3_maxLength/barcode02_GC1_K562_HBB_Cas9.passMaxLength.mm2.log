@@ -1,0 +1,10 @@
+[M::mm_idx_gen::47.483*1.60] collected minimizers
+[M::mm_idx_gen::51.007*2.69] sorted minimizers
+[M::main::51.008*2.69] loaded/built the index for 195 target sequence(s)
+[M::mm_mapopt_update::52.701*2.64] mid_occ = 694
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 195
+[M::mm_idx_stat::53.522*2.61] distinct minimizers: 100167746 (38.80% are singletons); average occurrences: 5.519; average spacing: 5.607; total length: 3099922541
+[M::worker_pipeline::55.643*2.97] mapped 13708 sequences
+[M::main] Version: 2.24-r1122
+[M::main] CMD: minimap2 -ax map-ont -t30 --rmq=yes /home/cornlab/data/genomes/Homo_sapiens/UCSC/hg38/Sequence/minimap2/genome.fa ./cutadapt/3_lengthCutoff/barcode02_GC1_K562_HBB_Cas9.passMaxLength.fastq.gz
+[M::main] Real time: 56.008 sec; CPU: 165.500 sec; Peak RSS: 11.336 GB

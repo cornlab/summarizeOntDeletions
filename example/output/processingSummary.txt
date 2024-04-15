@@ -1,0 +1,2 @@
+outputName	inputReads	readsPassCutadapt1	readsPassCutadapt2	readsPassCutadapt3	topLoci1	topLoci1_cpm	topLoci2	topLoci2_cpm	topLoci3	topLoci3_cpm
+barcode02_GC1_K562_HBB_Cas9	20000	17835	13708	13708	chr11:5220000-5230000	999953	chr11:5250000-5260000	46.5549	chrY_KI270740v1_random:0-37240	0

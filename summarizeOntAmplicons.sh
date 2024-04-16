@@ -14,7 +14,10 @@
 #
 # required packages (conda env with: cutadapt, minimap2, samtools, deepTools, bioawk)
 
-# runwith "source summarizeOntAmplicons.sh <pathToNgsData> <pathToSampleInfoFile> <pathToAlignerGenome>"
+# USAGE
+# activate conda environment with appropriate dependencies.
+# runwith "./summarizeOntAmplicons.sh <pathToNgsData> <pathToSampleInfoFile> <pathToAlignerGenome>"
+
 
 # load input params
 inputDir=$1
@@ -24,17 +27,19 @@ genome=$3
 maxLengthExtraBp=20
 maxThreads=30
 
+
 # print basic information to console
 printf "\n"
 date
 printf "\n"
-conda activate charles
+
 conda --version
 printf "conda environment: \t$CONDA_DEFAULT_ENV\n"
 printf "current directory: \t$PWD\n"
 printf "NGS data directory: \t./${inputDir}\n"
 printf "sample information: \t./${sampleInfo}\n"
 printf "aligner genome: \t./${genome}\n\n"
+
 
 # directory substructure
 fastqTrimmed="cutadapt/1_trimPrimer"
@@ -45,6 +50,7 @@ cutadaptReports="cutadapt/reports"
 outputLengths="countLengths"
 outputAlignFail="minimap2_failFilter2_genomicTarget"
 outputAlignPass="minimap2_passFilter3_maxLength"
+
 
 # make directories
 mkdir -p ${fastqTrimmed}
@@ -59,7 +65,7 @@ mkdir -p ${outputAlignPass}
 
 # main process
 # FASTQ filtering for read integrity, genomic target, and maxLength
-# c...countReadLength summarization
+# ...countReadLength summarization
 # ....minimap2 alignment to given genome
 { 
 	read

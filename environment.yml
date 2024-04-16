@@ -1,0 +1,11 @@
+name: summarizeOntDels
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioawk=1.0
+  - cutadapt=4.6
+  - deeptools=3.5.4
+  - samtools=1.19
+  - minimap2=2.28

@@ -40,7 +40,9 @@ cd <outputDirectory>
 ```
 
 ## preparation of the sample definition file
-An example sample definition file `sampleInfoExample.txt` is provided & corresponds to the ONT-seq data from K562 edited at HBB with CRISPR/Cas9 (./example/input/barcode02.fastq.gz). 
+An example sample definition file (`sampleInfoExample.txt`) is provided & corresponds to the ONT-seq data from K562 edited at HBB with CRISPR/Cas9 (`./example/input/barcode02.fastq.gz`).
+
+The sample definition file is a 7-column text file specifying:
 
 #### sample information
 1.	sample name for output

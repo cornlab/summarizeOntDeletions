@@ -1,5 +1,7 @@
 # summarizeOntDeletions
 Simple script for one-step preprocessing amplicon ONT-seq data for further analysis of deletions sizes. Takes amplicon ONT-seq datafiles as FASTQ.GZ and a sample definition file & outputs a simple QC summary, amplicon length summary, and alignments to the target genome. 
+
+The output of this preprocessing script is intended for use in further analysis or plotting (e.g., GraphPad Prism).
 <br/><br/>
 
 ## description of main steps

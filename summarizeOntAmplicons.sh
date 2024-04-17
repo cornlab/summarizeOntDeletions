@@ -18,15 +18,14 @@
 # activate conda environment with appropriate dependencies.
 # runwith "./summarizeOntAmplicons.sh <pathToNgsData> <pathToSampleInfoFile> <pathToAlignerGenome>"
 
+# tunable params
+maxLengthExtraBp=20
+maxThreads=30
 
 # load input params
 inputDir=$1
 sampleInfo=$2
 genome=$3
-
-maxLengthExtraBp=20
-maxThreads=30
-
 
 # print basic information to console
 printf "\n"

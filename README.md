@@ -67,7 +67,7 @@ Sequences for filtering genomic loci specificity via first and last 30bps of the
 <br/><br/>
 
 ## example for sample definition setup
-For the datafile in example, the HBB locus was PCR amplified using the following 2 primers. **Lowercase sequence is ONT-seq PCR stub sequence; uppercase is specific to target gene.**
+For the datafile in example `barcode02.fastq.gz`, the HBB locus was PCR amplified using the following 2 primers. **Lowercase sequence is ONT-seq PCR stub sequence; uppercase is specific to target gene.**
 
 -	PCR F primer: 	`5’-tttctgttggtgctgatattgcTCAAGCTACAAAAAGCCGCC`
 -	PCR R primer: 	`5’-acttgcctgtcgctctatcttcCCTTGAAGCCAGGATGATGGT`

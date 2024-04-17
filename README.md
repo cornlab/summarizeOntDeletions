@@ -21,7 +21,7 @@ A summary table the output subdirectory `countLengths` for each input FASTQ file
 A QC summary of reads passing each filtering step & genomic region alignment frequency is given in the `processingSummary.txt` file.
 <br/><br/>
 
-## conda environment
+## setup conda environment
 A conda environment with the required packages can be created with:
 
 ```
@@ -29,7 +29,6 @@ conda env create -f environment.yml
 ```
 
 ## usage 
-In the context of this directory structure. 
 ```
 conda activate summarizeOntDels
 cd <outputDirectory>
@@ -39,32 +38,32 @@ cd <outputDirectory>
 <pathToSampleInfoFile> \
 <pathToMiniMap2GenomeIndex>
 ```
-<br/><br/>
 
 ## preparation of the sample definition file
-An example sample definition file (sampleInfoExample.txt) is provided & corresponds to the ONT-seq data from K562 edited at HBB with CRISPR/Cas9 (./example/input/barcode02.fastq.gz). 
+An example sample definition file `sampleInfoExample.txt` is provided & corresponds to the ONT-seq data from K562 edited at HBB with CRISPR/Cas9 (./example/input/barcode02.fastq.gz). 
 
-The sample definition file is a 7-column text file with headers specifying:
-<br/><br/>
-
-### sample information
+#### sample information
 1.	sample name for output
 2.	input FASTQ.GZ file root name (e.g., `barcode02.fastq.gz` becomes `barcode02`)
 
-### cutadapt round 1
+#### cutadapt round 1 (see below figure)
 Sequences for filtering via full length PCR primers at both ends.
 
 3.	forward strand, cutadapt pattern: `[ONTstubFwd][PCR primer F]…[rc_PCR primer R][rc_ONTstubRev]`
 4.	reverse strand, cutadapt pattern: `[ONTstubRev][PCR primer R]…[rc_PCR primer F][rc_ONTstubFwd]`
 
-### cutadapt round 2
+#### cutadapt round 2 (see below figure)
 Sequences for filtering genomic loci specificity via first and last 30bps of the gDNA insert:
 
 5.	forward strand, cutadapt pattern: `[fwd_first30bps]..[fwd_last30bps]`
 6.	reverse strand, cutadapt pattern: `[rev_first30bps]…[prev_last30bps]`
 
-### maximum amplicon length
+#### maximum amplicon length
 7.	amplicon length expected for unedited cells
+<br/><br/>
+
+#### Expected structure of full-length ONT-seq read and resulting cutadapt filtering sequences:
+![figure 1a](https://github.com/cornlab/summarizeOntDeletions/blob/main/misc/figure1.PNG?raw=true)
 <br/><br/>
 
 ## example for sample definition setup
